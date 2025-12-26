@@ -1,0 +1,51 @@
+<div class="checkout-page">
+  <h1>Checkout</h1>
+
+  <div class="checkout-content">
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="cart-items">
+        <div class="cart-item" *ngFor="let item of cartItems">
+          <img [src]="item.product.image" alt="product image" class="cart-item-image" />
+          <div class="cart-item-info">
+            <h3>{{ item.product.name }}</h3>
+            <p>Quantity: {{ item.quantity }}</p>
+            <p>₹ {{ item.product.price * item.quantity }}</p>
+          </div>
+        </div>
+      </div>
+      <h3>Total: ₹ {{ total }}</h3>
+    </div>
+
+    <form class="checkout-form" (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+      <h2>Shipping Information</h2>
+
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" [(ngModel)]="customer.name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="customer.email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" [(ngModel)]="customer.address" name="address" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" [(ngModel)]="customer.city" name="city" required />
+      </div>
+
+      <div class="form-group">
+        <label for="zip">ZIP Code</label>
+        <input type="text" id="zip" [(ngModel)]="customer.zip" name="zip" required />
+      </div>
+
+      <button type="submit" class="submit-btn" [disabled]="!checkoutForm.form.valid">Place Order</button>
+    </form>
+  </div>
+</div>

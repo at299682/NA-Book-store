@@ -1,0 +1,128 @@
+.checkout-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.checkout-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.checkout-content {
+  display: flex;
+  gap: 40px;
+}
+
+.order-summary {
+  flex: 1;
+}
+
+.order-summary h2 {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cart-item-image {
+  width: 60px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cart-item-info h3 {
+  margin: 0 0 5px;
+  color: #000000;
+}
+
+.cart-item-info p {
+  color: #333;
+  margin: 2px 0;
+}
+
+.checkout-form {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.checkout-form h2 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.form-group textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #218838;
+}
+
+.submit-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}

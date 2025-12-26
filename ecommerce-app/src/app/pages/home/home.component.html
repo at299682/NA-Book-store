@@ -1,0 +1,64 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to NA Book Store</h1>
+    <p>Discover your next great read from our curated collection of books</p>
+    <a routerLink="/products" class="cta-btn">Browse Books</a>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <h2>Why Choose NA Book Store?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📚</div>
+        <h3>Curated Collection</h3>
+        <p>Handpicked books across all genres for every reader</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>Fast Delivery</h3>
+        <p>Quick and reliable shipping to your doorstep</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💝</div>
+        <h3>Special Bundles</h3>
+        <p>Exclusive bundles with extra content and goodies</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⭐</div>
+        <h3>Quality Guarantee</h3>
+        <p>Premium quality books with satisfaction guarantee</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-books">
+  <div class="container">
+    <h2>Featured Books</h2>
+    <div class="books-preview">
+      <div class="book-preview" *ngFor="let book of featuredBooks">
+        <img [src]="book.image" [alt]="book.name" />
+        <h4>{{ book.name }}</h4>
+        <p>₹ {{ book.price }}</p>
+      </div>
+    </div>
+    <a routerLink="/products" class="view-all-btn">View All Books</a>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About NA Book Store</h2>
+        <p>NA Book Store is your premier destination for quality books. We believe in the power of stories to transform lives and connect people. Our carefully curated collection spans fiction, non-fiction, self-help, and more.</p>
+        <p>Each book comes with exclusive bundles including digital content, author insights, and special merchandise to enhance your reading experience.</p>
+      </div>
+      <div class="about-image">
+        <img src="assets/products/TheConfidentMind.jpg" alt="Books collection" />
+      </div>
+    </div>
+  </div>
+</section>

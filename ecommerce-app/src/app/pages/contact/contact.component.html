@@ -1,0 +1,117 @@
+<section class="contact-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Get in touch with NA Book Store. We'd love to hear from you!</p>
+  </div>
+</section>
+
+<section class="contact-content">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <h3>Address</h3>
+            <p>NA Book Store Pvt Ltd<br>
+            123 Book Street<br>
+            Reading City, RC 12345</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <h3>Phone</h3>
+            <p>+1 (555) 123-BOOK<br>
+            Mon-Fri: 9AM-6PM</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <h3>Email</h3>
+            <p>hello&#64;nabookstore.com<br>
+            support&#64;nabookstore.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🕒</div>
+          <div>
+            <h3>Business Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>
+            Saturday: 10:00 AM - 4:00 PM<br>
+            Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send us a Message</h2>
+        <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" [(ngModel)]="contact.firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" [(ngModel)]="contact.lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" [(ngModel)]="contact.email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" [(ngModel)]="contact.subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="order">Order Inquiry</option>
+              <option value="shipping">Shipping Question</option>
+              <option value="returns">Returns & Exchanges</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" [(ngModel)]="contact.message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" [disabled]="!contactForm.form.valid">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>How long does shipping take?</h3>
+        <p>We ship within 1-2 business days. Delivery typically takes 3-5 business days within the country.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you offer international shipping?</h3>
+        <p>Yes, we ship worldwide. International shipping times vary by location.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is your return policy?</h3>
+        <p>We accept returns within 30 days of purchase for unused items in original packaging.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you have a physical store?</h3>
+        <p>Currently, we operate exclusively online, but we're planning to open physical locations soon.</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<div class="product-detail" *ngIf="product">
+  <img [src]="product.image" alt="product image" class="product-image" />
+
+  <div class="product-info">
+    <h1>{{ product.name }}</h1>
+    <p class="author" *ngIf="product.author">By {{ product.author }}</p>
+    <p class="price">₹ {{ product.price }}</p>
+    <p class="description">{{ product.description }}</p>
+
+    <div class="specifications">
+      <h2>Specifications</h2>
+      <ul>
+        <li *ngFor="let spec of product.specifications">{{ spec }}</li>
+      </ul>
+    </div>
+
+    <div class="bundling">
+      <h2>What's Included</h2>
+      <p *ngFor="let bundle of product.bundling">{{ bundle }}</p>
+    </div>
+
+    <button class="add-btn" (click)="addToCart()">Add to Cart</button>
+    <button class="back-btn" (click)="goBack()">Back to Products</button>
+  </div>
+</div>
+
+<div *ngIf="!product">
+  <p>Product not found.</p>
+</div>
